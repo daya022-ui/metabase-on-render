@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: metabase
+    env: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: MB_DB_TYPE
+        value: mysql
+      - key: MB_DB_HOST
+        value: localhost
+      - key: MB_DB_PORT
+        value: 3306
+      - key: MB_DB_DBNAME
+        value: retail_dwh
+      - key: MB_DB_USER
+        value: root
+      - key: MB_DB_PASS
+        value: 
+      - key: MB_SITE_URL
+        value: https://metabase-yourname.onrender.com
